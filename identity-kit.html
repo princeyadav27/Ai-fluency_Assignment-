@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Identity Kit — Prince Yadav</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#FAFAF8;
+  --ink:#14181C;
+  --main:#2B3A55;
+  --accent:#3F7D6B;
+  --line: rgba(20,24,28,0.12);
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+.page{
+  max-width:920px;
+  margin:0 auto;
+  padding:72px 32px 96px;
+}
+
+/* ---- header / lockup ---- */
+.eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--main);
+  margin:0 0 40px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.eyebrow::before{
+  content:"";
+  width:18px;height:1px;
+  background:var(--accent);
+  display:inline-block;
+}
+
+.lockup{
+  display:flex;
+  align-items:baseline;
+  gap:28px;
+  flex-wrap:wrap;
+  border-bottom:1px solid var(--line);
+  padding-bottom:36px;
+  margin-bottom:56px;
+}
+.mark{
+  font-family:'Newsreader', serif;
+  font-weight:500;
+  font-size:64px;
+  color:var(--main);
+  line-height:1;
+}
+.mark .cursor{
+  display:inline-block;
+  color:var(--accent);
+  animation:blink 1.4s step-end infinite;
+}
+@keyframes blink{ 50%{ opacity:0; } }
+.lockup-text h1{
+  font-family:'Newsreader', serif;
+  font-weight:400;
+  font-size:28px;
+  margin:0 0 4px;
+}
+.lockup-text p{
+  margin:0;
+  font-size:14px;
+  color:rgba(20,24,28,0.6);
+}
+
+/* ---- section shell ---- */
+section{ margin-bottom:56px; }
+.section-head{
+  display:flex;
+  align-items:baseline;
+  gap:12px;
+  margin-bottom:22px;
+}
+.section-num{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  color:var(--accent);
+}
+.section-title{
+  font-family:'Newsreader', serif;
+  font-size:20px;
+  font-weight:500;
+  margin:0;
+}
+
+/* ---- type specimen ---- */
+.type-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+.type-card{
+  background:var(--bg);
+  padding:32px;
+}
+.type-card .role{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--main);
+  margin-bottom:14px;
+}
+.type-card .sample-h{
+  font-family:'Newsreader', serif;
+  font-size:34px;
+  line-height:1.15;
+  margin:0 0 12px;
+}
+.type-card .sample-b{
+  font-family:'IBM Plex Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  margin:0 0 12px;
+  color:rgba(20,24,28,0.85);
+}
+.type-card .name{
+  font-size:13px;
+  color:rgba(20,24,28,0.55);
+}
+
+/* ---- palette ---- */
+.palette{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.swatch{ border:1px solid var(--line); }
+.swatch-color{ height:88px; }
+.swatch-info{ padding:12px 14px; }
+.swatch-info .label{
+  font-size:12px;
+  font-weight:500;
+  margin:0 0 2px;
+}
+.swatch-info .hex{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  color:rgba(20,24,28,0.55);
+  margin:0;
+}
+
+/* ---- marks ---- */
+.marks-row{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.mark-lg{
+  font-family:'Newsreader', serif;
+  font-weight:500;
+  font-size:80px;
+  color:var(--main);
+  border:1px solid var(--line);
+  padding:28px 40px;
+  line-height:1;
+}
+.favicon-set{ display:flex; gap:10px; align-items:center; }
+.favicon{
+  background:var(--main);
+  color:var(--bg);
+  font-family:'Newsreader', serif;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.favicon.f32{ width:32px; height:32px; font-size:16px; }
+.favicon.f48{ width:48px; height:48px; font-size:22px; }
+.favicon.f64{ width:64px; height:64px; font-size:28px; }
+
+/* ---- style note ---- */
+.note{
+  border-left:2px solid var(--accent);
+  padding:4px 0 4px 24px;
+}
+.note p{
+  font-family:'Newsreader', serif;
+  font-style:italic;
+  font-size:19px;
+  line-height:1.55;
+  margin:0;
+  color:var(--ink);
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding-top:20px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  color:rgba(20,24,28,0.45);
+  letter-spacing:0.04em;
+}
+
+@media (max-width:640px){
+  .type-grid{ grid-template-columns:1fr; }
+  .palette{ grid-template-columns:repeat(2,1fr); }
+  .mark{ font-size:44px; }
+  .mark-lg{ font-size:56px; padding:20px 28px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="eyebrow">Identity Kit — Week 3</div>
+
+  <div class="lockup">
+    <div class="mark">PY<span class="cursor">_</span></div>
+    <div class="lockup-text">
+      <h1>Prince Yadav</h1>
+      <p>Backend &amp; agentic systems engineer</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Type</h2>
+    </div>
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="role">Heading</div>
+        <p class="sample-h">Systems that hold up.</p>
+        <p class="name">Newsreader — serif, used at display size only</p>
+      </div>
+      <div class="type-card">
+        <div class="role">Body</div>
+        <p class="sample-b">A backend engineer's portfolio should read like well-structured logs — clear, sequential, nothing hidden. Set in IBM Plex Sans for long-form text, case studies, and UI copy.</p>
+        <p class="name">IBM Plex Sans — sans, all running text</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Palette</h2>
+    </div>
+    <div class="palette">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#FAFAF8;"></div>
+        <div class="swatch-info">
+          <p class="label">Background</p>
+          <p class="hex">#FAFAF8</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#14181C;"></div>
+        <div class="swatch-info">
+          <p class="label">Text</p>
+          <p class="hex">#14181C</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#2B3A55;"></div>
+        <div class="swatch-info">
+          <p class="label">Main</p>
+          <p class="hex">#2B3A55</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#3F7D6B;"></div>
+        <div class="swatch-info">
+          <p class="label">Accent</p>
+          <p class="hex">#3F7D6B</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Logo &amp; favicon</h2>
+    </div>
+    <div class="marks-row">
+      <div class="mark-lg">PY</div>
+      <div class="favicon-set">
+        <div class="favicon f64">P</div>
+        <div class="favicon f48">P</div>
+        <div class="favicon f32">P</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Style note</h2>
+    </div>
+    <div class="note">
+      <p>Newsreader for headings, IBM Plex Sans for body — steel navy #2B3A55 on warm paper #FAFAF8, muted teal #3F7D6B as the only accent.<br>
+      Mood: quiet engineering confidence — a system status that reads "healthy," not a pitch.</p>
+    </div>
+  </section>
+
+  <footer>PRINCE YADAV · IDENTITY KIT · v1</footer>
+
+</div>
+</body>
+</html>
